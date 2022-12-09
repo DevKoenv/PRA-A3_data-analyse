@@ -69,6 +69,16 @@ while isRunning:
 
     elif choice == '6':
         os.system('cls')
+        functie = input('Welke functie: ')
+        functie = functie[0].upper() + functie[1:]
+
+        afdeling = input('Welke afdeling: ')
+        afdeling = afdeling[0].upper() + afdeling[1:]
+
+        functieFilter = (data['Functie'] == functie)
+        afdelingFilter = (data['Afdeling'] == afdeling)
+
+        print(f'Aantal medewerkers met functie {functie} bij afdeling {afdeling}: {data[functieFilter & afdelingFilter].count()}')
 
         input('\nDruk op enter om door te gaan...')
 
