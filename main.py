@@ -26,6 +26,11 @@ while isRunning:
 
     elif choice == '2':
         os.system('cls')
+        functie = input('Welke functie: ')
+        functie = functie[0].upper() + functie[1:]
+
+        functieFilter = (data['Functie'] == functie)
+        print(f'Het gemiddelde salaris voor functie {functie} is: {data[functieFilter]["Salaris_bruto"].mean()}')
 
         input('\nDruk op enter om door te gaan...')
 
