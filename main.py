@@ -60,7 +60,11 @@ while isRunning:
 
     elif choice == '5':
         os.system('cls')
-
+        dateInServiceSorted = data.sort_values(by='Datum in dienst', ascending=False).head(10)
+        print('Top 10 langst in dienst:')
+            
+        print(dateInServiceSorted[['Voornaam', 'Achternaam', 'Datum in dienst']].to_string(index=False))
+        
         input('\nDruk op enter om door te gaan...')
 
     elif choice == '6':
