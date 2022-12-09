@@ -1,5 +1,3 @@
-Databestand:
-
 |Voornaam|Achternaam                   |BSN   |Geboortedatum                                |Geboorteplaats          |Afdeling    |Functie                  |Schaal|FTE%|Salaris_bruto|Datum in dienst|
 |--------|-----------------------------|------|---------------------------------------------|------------------------|------------|-------------------------|------|----|-------------|---------------|
 |Francis |Willemsen                    |85559670|6-3-1975                                     |Heemskerk               |R&R         |Chauffeur                |7     |0,4 |840          |10-6-2007      |
