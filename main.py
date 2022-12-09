@@ -31,6 +31,7 @@ while isRunning:
         functie = functie[0].upper() + functie[1:]
 
         functieFilter = (data['Functie'] == functie)
+        os.system('cls')
         print(f'Het gemiddelde salaris voor functie {functie} is: {data[functieFilter]["Salaris_bruto"].mean()}')
 
         input('\nDruk op enter om door te gaan...')
@@ -63,7 +64,6 @@ while isRunning:
         dateInServiceSorted = data.sort_values(by='Datum in dienst', ascending=False).head(10)
         print('Top 10 langst in dienst:')
             
-        print(dateInServiceSorted[['Voornaam', 'Achternaam', 'Datum in dienst']].to_string(index=False))
         
         input('\nDruk op enter om door te gaan...')
 
@@ -79,6 +79,7 @@ while isRunning:
         afdelingFilter = (data['Afdeling'] == afdeling)
 
         print(f'Aantal medewerkers met functie {functie} bij afdeling {afdeling}: {data[functieFilter & afdelingFilter].count()}')
+        os.system('cls')
 
         input('\nDruk op enter om door te gaan...')
 
