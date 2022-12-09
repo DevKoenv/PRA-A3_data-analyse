@@ -50,6 +50,11 @@ while isRunning:
 
     elif choice == '4':
         os.system('cls')
+        chauffeurCount = 0
+        for i in data['Functie']:
+            if i == 'Chauffeur':
+                chauffeurCount += 1
+        print(f'Aantal chauffeurs: {chauffeurCount}')
 
         input('\nDruk op enter om door te gaan...')
 
