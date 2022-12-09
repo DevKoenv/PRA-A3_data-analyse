@@ -20,6 +20,7 @@ while isRunning:
 
     if choice == '1':
         os.system('cls')
+        print('Het gemiddelde salaris is: ', data['Salaris_bruto'].mean())
 
         input('\nDruk op enter om door te gaan...')
 
