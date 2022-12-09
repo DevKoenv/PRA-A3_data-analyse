@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+from datetime import datetime, timedelta
 
 data = pd.read_csv('VW.csv', sep=';')
 
@@ -36,7 +37,15 @@ while isRunning:
 
     elif choice == '3':
         os.system('cls')
+        willRetire = 0
+        for i in data['Geboortedatum']:
+            birthDate = datetime.strptime(i, '%d-%m-%Y')
+            today = datetime.today()
+            age = today.year - birthDate.year - ((today.month, today.day) < (birthDate.month, birthDate.day))
+            if age >= 65:
+                willRetire += 1
 
+        print(f'Aantal werknemers binnen 2 jaar met pensioen: {willRetire}')
         input('\nDruk op enter om door te gaan...')
 
     elif choice == '4':
