@@ -17,9 +17,15 @@ while isRunning:
 
     print('X. Stop het programma')
 
-    choice = input('\nMaak uw keuze: ')
+    choice = input('\nMaak uw keuze: ').lower()
 
-    if choice == '1':
+    if choice not in ['1', '2', '3', '4', '5', '6', 'w', 'x']:
+        os.system('cls')
+        print('Ongeldige keuze, probeer het opnieuw')
+
+        input('\nDruk op enter om door te gaan...')
+
+    elif choice == '1':
         os.system('cls')
         gemiddeldSalaris = data['Salaris_bruto'].mean()
         print(f'Het gemiddelde salaris is: {gemiddeldSalaris}')
@@ -88,12 +94,12 @@ while isRunning:
 
         input('\nDruk op enter om door te gaan...')
 
-    elif choice.lower() == 'w':
+    elif choice == 'w':
         os.system('cls')
 
         input('\nDruk op enter om door te gaan...')
 
-    elif choice.lower() == 'x':
+    elif choice == 'x':
         os.system('cls')
         isRunning = False
         print('Het programma wordt afgesloten')
