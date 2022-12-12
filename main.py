@@ -147,12 +147,40 @@ while isRunning:
     elif choice == 'w':
         # Windows Screen Clear
         os.system('cls')
-        print(f'Aantal medewerkers met functie {functie} bij afdeling {afdeling}: {aantalMedewerkers}')
 
-        input('\nDruk op enter om door te gaan...')
+        print('1. Gemiddeld salaris')
+        choice1 = choice1()
 
-    elif choice == 'w':
-        os.system('cls')
+        print('2. Gemiddeld salaris voor functie X')
+        choice2 = choice2()
+
+        print('3. Aantal werknemers binnen 2 jaar met pensioen')
+        choice3 = choice3()
+
+        print('\n4. Aantal chauffeurs')
+        choice4 = choice4()
+
+        print('--------------------------------------------\n')
+        print('\n5. Top 10 langst in dienst')
+        choice5 = choice5()
+
+        print('6. Aantal medewerkers met functie X bij afdeling Y')
+        choice6 = choice6()
+
+        with open('output.txt', 'w') as f:
+            f.write('--------------------------------------------\n')
+            f.write(choice1 + '\n')
+            f.write('--------------------------------------------\n')
+            f.write(choice2 + '\n')
+            f.write('--------------------------------------------\n')
+            f.write(choice3 + '\n')
+            f.write('--------------------------------------------\n')
+            f.write(choice4 + '\n')
+            f.write('--------------------------------------------\n')
+            f.write(choice5 + '\n')
+            f.write('--------------------------------------------\n')
+            f.write(choice6 + '\n')
+            f.write('--------------------------------------------\n')
 
         input('\nDruk op enter om door te gaan...')
 
