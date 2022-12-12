@@ -73,7 +73,9 @@ def choice6():
 
 isRunning = True
 while isRunning:
+    # Windows Screen Clear
     os.system('cls')
+    
     print('1. Bereken het gemiddelde salaris')
     print('2. Berekend het gemiddelde salaris voor functie X')
     print('3. Aantal werknemers binnen 2 jaar met pensioen')
@@ -87,12 +89,15 @@ while isRunning:
     choice = input('\nMaak uw keuze: ').lower()
 
     if choice not in ['1', '2', '3', '4', '5', '6', 'w', 'x']:
+        # Windows Screen Clear
         os.system('cls')
+        
         print('Ongeldige keuze, probeer het opnieuw')
 
         input('\nDruk op enter om door te gaan...')
 
     elif choice == '1':
+        # Windows Screen Clear
         os.system('cls')
 
         choice1()
@@ -100,6 +105,7 @@ while isRunning:
         input('\nDruk op enter om door te gaan...')
 
     elif choice == '2':
+        # Windows Screen Clear
         os.system('cls')
 
         choice2()
@@ -107,6 +113,7 @@ while isRunning:
         input('\nDruk op enter om door te gaan...')
 
     elif choice == '3':
+        # Windows Screen Clear
         os.system('cls')
 
         choice3()
@@ -114,6 +121,7 @@ while isRunning:
         input('\nDruk op enter om door te gaan...')
 
     elif choice == '4':
+        # Windows Screen Clear
         os.system('cls')
 
         choice4()
@@ -121,6 +129,7 @@ while isRunning:
         input('\nDruk op enter om door te gaan...')
 
     elif choice == '5':
+        # Windows Screen Clear
         os.system('cls')
 
         choice5()
@@ -128,14 +137,15 @@ while isRunning:
         input('\nDruk op enter om door te gaan...')
 
     elif choice == '6':
+        # Windows Screen Clear
         os.system('cls')
         
         choice6()
 
         input('\nDruk op enter om door te gaan...')
 
-        aantalMedewerkers = data[functieFilter & afdelingFilter].shape[0]
-
+    elif choice == 'w':
+        # Windows Screen Clear
         os.system('cls')
         print(f'Aantal medewerkers met functie {functie} bij afdeling {afdeling}: {aantalMedewerkers}')
 
@@ -147,6 +157,7 @@ while isRunning:
         input('\nDruk op enter om door te gaan...')
 
     elif choice == 'x':
+        # Windows Screen Clear
         os.system('cls')
         isRunning = False
         print('Het programma wordt afgesloten')
