@@ -1,7 +1,6 @@
 import os
 import pandas as pd
 from datetime import datetime
-import time
 
 try:
     data = pd.read_csv('VW.csv', sep=';')
@@ -156,32 +155,26 @@ while isRunning:
         print('1. Gemiddeld salaris')
         choice1 = choice1()
 
-        time.sleep(3)
         os.system('cls')
         print('2. Gemiddeld salaris voor functie X')
         choice2 = choice2()
 
-        time.sleep(3)
         os.system('cls')
         print('3. Aantal werknemers binnen 2 jaar met pensioen')
         choice3 = choice3()
 
-        time.sleep(3)
         os.system('cls')
         print('4. Aantal chauffeurs')
         choice4 = choice4()
 
-        time.sleep(3)
         os.system('cls')
         print('5. Top 10 langst in dienst')
         choice5 = choice5()
 
-        time.sleep(3)
         os.system('cls')
         print('6. Aantal medewerkers met functie X bij afdeling Y')
         choice6 = choice6()
 
-        time.sleep(3)
         os.system('cls')
         with open('output.txt', 'w') as f:
             f.write('--------------------------------------------\n')
