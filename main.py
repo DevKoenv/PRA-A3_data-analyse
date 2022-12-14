@@ -3,7 +3,11 @@ import pandas as pd
 from datetime import datetime
 import time
 
-data = pd.read_csv('VW.csv', sep=';')
+try:
+    data = pd.read_csv('VW.csv', sep=';')
+except FileNotFoundError:
+    print('File not found')
+    exit()
 
 def choice1():
     gemiddeldSalaris = data['Salaris_bruto'].mean()
