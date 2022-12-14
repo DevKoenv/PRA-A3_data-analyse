@@ -46,10 +46,12 @@ def choice4():
     return(f'Aantal chauffeurs: {chauffeurCount}')
 
 def choice5():
-    dateInServiceSorted = data.sort_values(by='Datum in dienst', ascending=False).head(10)
-    top10 = dateInServiceSorted[['Voornaam', 'Achternaam', 'Datum in dienst']].to_string(index=False)
+    data['Datum in dienst'] = pd.to_datetime(data['Datum in dienst'], format='%d-%m-%Y').sort_values()
+    datumsSorted = data.sort_values(by='Datum in dienst')
 
-    return(top10)
+    top10 = datumsSorted[['Voornaam', 'Achternaam', 'Datum in dienst']].head(10).to_string(index=False)
+
+    return(f'Top 10 langst in dienst: \n{top10}')
 
 def choice6():
     functie = input('Welke functie: ')
