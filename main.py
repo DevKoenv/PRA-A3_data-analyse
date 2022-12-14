@@ -8,9 +8,9 @@ except FileNotFoundError:
     print('File not found')
     exit()
 
+
 def choice1():
     gemiddeldSalaris = data['Salaris_bruto'].mean()
-    print(f'Het gemiddelde salaris is: {gemiddeldSalaris}')
 
     return(f'Het gemiddelde salaris is: {gemiddeldSalaris}')
 
@@ -22,7 +22,6 @@ def choice2():
 
     gemiddeldSalaris = data[functieFilter]["Salaris_bruto"].mean()
     os.system('cls')
-    print(f'Het gemiddelde salaris voor functie {functie} is: {gemiddeldSalaris}')
 
     return(f'Het gemiddelde salaris voor functie {functie} is: {gemiddeldSalaris}')
 
@@ -35,7 +34,6 @@ def choice3():
         if age >= 65:
             willRetire += 1
 
-    print(f'Aantal werknemers binnen 2 jaar met pensioen: {willRetire}')
 
     return(f'Aantal werknemers binnen 2 jaar met pensioen: {willRetire}')
 
@@ -44,16 +42,14 @@ def choice4():
     for i in data['Functie']:
         if i == 'Chauffeur':
             chauffeurCount += 1
-    print(f'Aantal chauffeurs: {chauffeurCount}')
 
     return(f'Aantal chauffeurs: {chauffeurCount}')
 
 def choice5():
     dateInServiceSorted = data.sort_values(by='Datum in dienst', ascending=False).head(10)
     top10 = dateInServiceSorted[['Voornaam', 'Achternaam', 'Datum in dienst']].to_string(index=False)
-    print(f'Top 10 langst in dienst: \n{top10}')
 
-    return(f'Top 10 langst in dienst: \n{top10}')
+    return(top10)
 
 def choice6():
     functie = input('Welke functie: ')
@@ -68,11 +64,8 @@ def choice6():
     aantalMedewerkers = data[functieFilter & afdelingFilter].shape[0]
 
     os.system('cls')
-    print(f'Aantal medewerkers met functie {functie} bij afdeling {afdeling}: {aantalMedewerkers}')
 
     return(f'Aantal medewerkers met functie {functie} bij afdeling {afdeling}: {aantalMedewerkers}')
-
-
 
 
 isRunning = True
@@ -104,7 +97,7 @@ while isRunning:
         # Windows Screen Clear
         os.system('cls')
 
-        choice1()
+        print(choice1())
 
         input('\nDruk op enter om door te gaan...')
 
@@ -112,7 +105,7 @@ while isRunning:
         # Windows Screen Clear
         os.system('cls')
 
-        choice2()
+        print(choice2())
 
         input('\nDruk op enter om door te gaan...')
 
@@ -120,7 +113,7 @@ while isRunning:
         # Windows Screen Clear
         os.system('cls')
 
-        choice3()
+        print(choice3())
         
         input('\nDruk op enter om door te gaan...')
 
@@ -128,7 +121,7 @@ while isRunning:
         # Windows Screen Clear
         os.system('cls')
 
-        choice4()
+        print(choice4())
 
         input('\nDruk op enter om door te gaan...')
 
@@ -136,7 +129,7 @@ while isRunning:
         # Windows Screen Clear
         os.system('cls')
 
-        choice5()
+        print(choice5())
 
         input('\nDruk op enter om door te gaan...')
 
@@ -144,7 +137,7 @@ while isRunning:
         # Windows Screen Clear
         os.system('cls')
         
-        choice6()
+        print(choice6())
 
         input('\nDruk op enter om door te gaan...')
 
@@ -158,15 +151,12 @@ while isRunning:
         os.system('cls')
         print('2. Gemiddeld salaris voor functie X')
         choice2 = choice2()
-
         os.system('cls')
         print('3. Aantal werknemers binnen 2 jaar met pensioen')
         choice3 = choice3()
-
         os.system('cls')
         print('4. Aantal chauffeurs')
         choice4 = choice4()
-
         os.system('cls')
         print('5. Top 10 langst in dienst')
         choice5 = choice5()
