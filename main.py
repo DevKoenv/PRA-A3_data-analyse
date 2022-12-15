@@ -147,20 +147,13 @@ while isRunning:
         # Windows Screen Clear
         os.system('cls')
 
-        print('1. Gemiddeld salaris')
         choice1 = choice1()
 
         os.system('cls')
         print('2. Gemiddeld salaris voor functie X')
         choice2 = choice2()
-        os.system('cls')
-        print('3. Aantal werknemers binnen 2 jaar met pensioen')
         choice3 = choice3()
-        os.system('cls')
-        print('4. Aantal chauffeurs')
         choice4 = choice4()
-        os.system('cls')
-        print('5. Top 10 langst in dienst')
         choice5 = choice5()
 
         os.system('cls')
@@ -169,6 +162,7 @@ while isRunning:
 
         os.system('cls')
         with open('output.txt', 'w') as f:
+            f.write(f'Statestieken berekend op: {datetime.now()}\n')
             f.write('--------------------------------------------\n')
             f.write(choice1 + '\n')
             f.write('--------------------------------------------\n')
