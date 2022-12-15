@@ -202,6 +202,7 @@ while isRunning:
             f.write('--------------------------------------------\n')
             f.write(choice6 + '\n')
             f.write('--------------------------------------------\n')
+            f.close()
 
         print('Alle gegevens zijn weggeschreven naar het bestand output.txt')
         input('\nDruk op enter om door te gaan...')
