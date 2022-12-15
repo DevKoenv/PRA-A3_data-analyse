@@ -9,11 +9,17 @@ except FileNotFoundError:
     exit()
 
 
+"""
+Bereken het gemiddelde salaris
+"""
 def choice1():
     gemiddeldSalaris = data['Salaris_bruto'].mean()
 
     return(f'Het gemiddelde salaris is: {gemiddeldSalaris}')
 
+"""
+Bereken het gemiddelde salaris voor functie X
+"""
 def choice2():
     functie = input('Welke functie: ')
     functie = functie[0].upper() + functie[1:]
@@ -25,6 +31,11 @@ def choice2():
 
     return(f'Het gemiddelde salaris voor functie {functie} is: {gemiddeldSalaris}')
 
+"""
+Bereken het aantal werknemers binnen 2 jaar met pensioen
+
+!PENSIOENLEEFTIJD IS 67 JAAR!
+"""
 def choice3():
     willRetire = 0
     for i in data['Geboortedatum']:
@@ -37,6 +48,9 @@ def choice3():
 
     return(f'Aantal werknemers binnen 2 jaar met pensioen: {willRetire}')
 
+"""
+Bereken het aantal chauffeurs
+"""
 def choice4():
     chauffeurCount = 0
     for i in data['Functie']:
@@ -45,6 +59,9 @@ def choice4():
 
     return(f'Aantal chauffeurs: {chauffeurCount}')
 
+"""
+Bereken het top 10 langst in dienst
+"""
 def choice5():
     data['Datum in dienst'] = pd.to_datetime(data['Datum in dienst'], format='%d-%m-%Y').sort_values()
     datumsSorted = data.sort_values(by='Datum in dienst')
@@ -53,6 +70,9 @@ def choice5():
 
     return(f'Top 10 langst in dienst: \n{top10}')
 
+"""
+Bereken het aantal medewerkers met functie X bij afdeling Y
+"""
 def choice6():
     functie = input('Welke functie: ')
     functie = functie[0].upper() + functie[1:]
@@ -146,6 +166,12 @@ while isRunning:
     elif choice == 'w':
         # Windows Screen Clear
         os.system('cls')
+
+        """
+        Print alle statestieken naar een bestand
+
+        !OUTPUT BESTAND WORDT OVERSCHREVEN!
+        """
 
         choice1 = choice1()
 
